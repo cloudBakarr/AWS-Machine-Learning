@@ -1,0 +1,34 @@
+version: 0.0
+os: linux
+files:
+  - source: /index.html
+    destination: /var/www/html/
+  - source: /app.py
+    destination: home/ec2-user/football-analytics-app/
+  - source: /assets
+    destination: home/ec2-user/football-analytics-app/assets/
+  - source: /requirements.txt
+    destination: home/ec2-user/football-analytics-app/
+  - source: /data
+    destination: home/ec2-user/football-analytics-app/data/
+  - source: /players_20.csv
+    destination: home/ec2-user/football-analytics-app/
+  - source: /soccer_entry_point.py
+    destination: home/ec2-user/football-analytics-app/
+  - source: /.aws
+    destination: home/ec2-user/.aws/
+  - source: /.aws
+    destination: home/ec2-user/football-analytics-app/.aws/
+hooks:
+  BeforeInstall:
+    - location: scripts/install_dependencies
+      timeout: 100
+      runas: root
+    - location: scripts/start_server
+      timeout: 100
+      runas: root
+  ApplicationStop:
+    - location: scripts/stop_server
+      timeout: 100
+      runas: root
+

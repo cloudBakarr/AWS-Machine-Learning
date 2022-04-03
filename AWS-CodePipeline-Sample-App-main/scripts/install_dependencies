@@ -1,0 +1,18 @@
+#!/bin/bash
+yum install -y httpd
+python3 -m pip install streamlit
+python3 -m pip install seaborn
+python3 -m pip install pandas
+python3 -m pip install plotly
+python3 -m pip install plotly-express
+python3 -m pip install matplotlib
+python3 -m pip install numpy
+python3 -m pip install s3fs
+python3 -m pip install sagemaker
+python3 -m pip install -U scikit-learn
+python3 -m pip install boto3
+sudo aws configure
+echo "$AWS_ACCESS_KEY_ID"
+echo "$AWS_SECRET_ACCESS_KEY"
+echo " eu-central-1"
+echo "None"
