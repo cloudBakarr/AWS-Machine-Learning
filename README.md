@@ -1,6 +1,6 @@
 # AWS-Machine-Learning
 
-This project would consist of an AWS S3-hosted Database holding a dataset that we will train and test our machine learning model on.
+This project consist of an AWS S3-hosted Database holding a dataset that we will train and test our machine learning model on.
 
 Then we have an EC2 instance running a Streamlit server that has all the inner-workings of our Python Web App.
 
